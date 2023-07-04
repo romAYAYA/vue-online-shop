@@ -5,8 +5,10 @@
     </div>
     <div class="list-wrapper">
       <catalog-item
-        v-for="product in products" :key="product.article"
-        :product_data="product"
+          v-for="product in products"
+          :key="product.article"
+          :product_data="product"
+          @sendArticle="showArticle"
       />
 
     </div>
@@ -99,9 +101,13 @@ export default {
       ]
 
     }
-
+  },
+  computed: {},
+  methods: {
+    showArticle(data) {
+      console.log(data)
+    }
   }
-
 }
 </script>
 

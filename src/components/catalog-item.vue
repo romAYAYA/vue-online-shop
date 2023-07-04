@@ -2,12 +2,16 @@
   <div class="catalog-item">
     <div class="item-info">
       <div class="image-wrapper">
-        <img class="fill" :src="product_data.image" alt="product">
+        <img class="fill"
+             :src="product_data.image"
+             alt="product">
       </div>
       <p class="product-name">{{ product_data.name }}</p>
-      <p class="product-price">Price: {{ product_data.price }}</p>
+      <p class="product-price">Price: {{ product_data.price }} USD</p>
     </div>
-    <button class="add-to-cart-btn btn">Add to Cart</button>
+    <button class="add-to-cart-btn btn"
+            @click="sendData">Add to Cart
+    </button>
   </div>
 </template>
 
@@ -21,8 +25,16 @@ export default {
         return {};
       }
     }
+  },
+  data() {
+    return {}
+  },
+  computed: {},
+  methods: {
+    sendData(): void {
+      this.$emit('sendArticle', this.product_data.article)
+    }
   }
-
 }
 </script>
 
