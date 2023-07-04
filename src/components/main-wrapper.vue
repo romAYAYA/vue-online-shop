@@ -1,9 +1,9 @@
 <template>
   <div class="main-wrapper">
-    <h1>
+    <div>
       <catalog-list/>
       <shop-cart/>
-    </h1>
+    </div>
   </div>
 </template>
 
@@ -29,7 +29,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss">
 .main-wrapper {
   display: flex;
   justify-content: center;
