@@ -23,19 +23,15 @@ export default {
       type: Object as () => object,
       default(): object {
         return {};
-      }
-    }
+      },
+    },
   },
-  data() {
-    return {}
-  },
-  computed: {},
   methods: {
-    sendData(): void {
-      this.$emit('sendArticle', this.product_data.article)
-    }
-  }
-}
+    sendData(this: { $emit: Function; product_data: any }) {
+      this.$emit('sendArticle', this.product_data.article);
+    },
+  },
+};
 </script>
 
 <style lang="scss">

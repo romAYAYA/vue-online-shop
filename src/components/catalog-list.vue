@@ -5,12 +5,11 @@
     </div>
     <div class="list-wrapper">
       <catalog-item
-          v-for="product in products"
+          v-for="product in PRODUCTS"
           :key="product.article"
           :product_data="product"
           @sendArticle="showArticle"
       />
-
     </div>
   </div>
 
@@ -18,6 +17,7 @@
 
 <script>
 import CatalogItem from "@/components/catalog-item.vue";
+import {mapActions, mapGetters} from "vuex";
 
 export default {
   name: "catalog-list",
@@ -26,87 +26,29 @@ export default {
   },
   props: {},
   data() {
-    return {
-      products: [
-        {
-          image: "https://www.animesenpai.net/wp-content/uploads/2022/08/D6uwJOAXkAAeKr1.jpg.webp",
-          name: "Anime Girl 1",
-          price: 100,
-          article: "G1",
-          available: true
-        },
-        {
-          image: "https://www.animesenpai.net/wp-content/uploads/2022/09/eromanga-sensei-izumi-sagiri-wallpaper-thumb.jpg.webp",
-          name: "Anime Girl 2",
-          price: 150,
-          article: "G2",
-          available: true
-        },
-        {
-          image: "https://www.animesenpai.net/wp-content/uploads/2022/09/Lethal-Cute-Girls-4.jpg",
-          name: "Anime Girl 3",
-          price: 999,
-          article: "G3",
-          available: false
-        },
-        {
-          image: "https://www.animesenpai.net/wp-content/uploads/2022/09/momo-velia-deviluke-to-love-ru-pink-hair-wallpaper-preview.jpg.webp",
-          name: "Anime Girl 4",
-          price: 843,
-          article: "G4",
-          available: true
-        },
-        {
-          image: "https://www.animesenpai.net/wp-content/uploads/2022/09/maxresdefault.jpg.webp",
-          name: "Anime Girl 5",
-          price: 42,
-          article: "G5",
-          available: true
-        },
-        {
-          image: "https://www.animesenpai.net/wp-content/uploads/2022/09/Tienes-tantos-estilos-Asi-se-ve-Rei-Ayanami-con-un-cambio-de-look-en-Evangelion.webp",
-          name: "Anime Girl 6",
-          price: 1530,
-          article: "G6",
-          available: false
-        },
-        {
-          image: "https://www.animesenpai.net/wp-content/uploads/2022/09/d55c35ed3dc229fcbc6ee5e713f6437a-1536x864.jpg.webp",
-          name: "Anime Girl 7",
-          price: 894,
-          article: "G7",
-          available: true
-        },
-        {
-          image: "https://www.animesenpai.net/wp-content/uploads/2022/09/maxresdefault-1.jpg.webp",
-          name: "Anime Girl 8",
-          price: 783,
-          article: "G8",
-          available: true
-        },
-        {
-          image: "https://www.animesenpai.net/wp-content/uploads/2022/09/girl-kawaii-illya-sviel-Favim.com-6307070-min.jpg.webp",
-          name: "Anime Girl 9",
-          price: 1320,
-          article: "G9",
-          available: false
-        },
-        {
-          image: "https://www.animesenpai.net/wp-content/uploads/2022/09/nao-tomori-charlotte-art-wallpaper-preview.jpg.webp",
-          name: "Anime Girl 10",
-          price: 999999,
-          article: "G10",
-          available: true
-        }
-      ]
-
-    }
+    return {}
   },
-  computed: {},
+  computed: {
+    ...mapGetters([
+        'PRODUCTS'
+    ])
+  },
   methods: {
+    ...mapActions([
+      'GET_PRODUCTS_FROM_API'
+    ]),
+
     showArticle(data) {
       console.log(data)
     }
+  },
+  mounted() {
+    this.GET_PRODUCTS_FROM_API()
+        .then((response)=> {
+          if (response.data) {
+            console.log('Data loaded')
+          }
+        })
   }
 }
 </script>
