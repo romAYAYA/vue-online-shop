@@ -2,14 +2,18 @@
   <div class="main-wrapper">
     <div>
       <catalog-list/>
-      <shop-cart/>
+      <shop-cart
+          v-if="CART.length"
+          :cart_data="CART"
+      />
     </div>
   </div>
 </template>
 
 <script lang="ts">
 import CatalogList from "@/components/catalog-list.vue";
-import ShopCart from "@/components/shop-cart.vue";
+import ShopCart from "@/components/shop-cart.vue"
+import {mapGetters} from "vuex";
 
 export default {
   name: 'main-wrapper',
@@ -20,7 +24,9 @@ export default {
       title: 'Main wrapper'
     }
   },
-  computed: {},
+  computed: {
+    ...mapGetters(['CART'])
+  },
   methods: {},
   watch: {},
   mounted() {

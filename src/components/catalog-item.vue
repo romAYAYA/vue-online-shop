@@ -10,7 +10,7 @@
       <p class="product-price">Price: {{ product_data.price }} USD</p>
     </div>
     <button class="add-to-cart-btn btn"
-            @click="sendData">Add to Cart
+            @click="addToCart">Add to Cart
     </button>
   </div>
 </template>
@@ -27,9 +27,9 @@ export default {
     },
   },
   methods: {
-    sendData(this: { $emit: Function; product_data: any }) {
-      this.$emit('sendArticle', this.product_data.article);
-    },
+    addToCart(this: { $emit: Function; product_data: any }) {
+      this.$emit('addToCart', this.product_data)
+    }
   },
 };
 </script>
@@ -44,7 +44,7 @@ export default {
   justify-content: center;
   flex-basis: 25%;
   padding: $padding*2;
-  height: 200px;
+  height: 220px;
   border-radius: $radius;
   background-color: hsla(12, 44%, 58%, 1);
 }
