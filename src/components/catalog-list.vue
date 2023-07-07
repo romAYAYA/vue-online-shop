@@ -1,5 +1,12 @@
 <template>
   <div class="catalog-list">
+    <!--    move to header-->
+    <router-link to="/cart">
+      <div class="catalog-link-to-cart">
+        Cart: {{ CART.length }}
+      </div>
+    </router-link>
+
     <div class="title">
       Catalog
     </div>
@@ -30,7 +37,8 @@ export default {
   },
   computed: {
     ...mapGetters([
-      'PRODUCTS'
+      'PRODUCTS',
+        'CART' // Move to header
     ])
   },
   methods: {
@@ -60,13 +68,24 @@ export default {
   flex-direction: column;
   align-items: center;
   gap: 50px;
+
+  .list-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+  }
+
+  //move to header
+  .catalog-link-to-cart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 16px;
+    border: solid 1px black;
+  }
 }
 
-.list-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  gap: 10px;
-}
+
 </style>
