@@ -1,20 +1,18 @@
 <template>
   <div>
-    <main-wrapper/>
+    <main-wrapper />
   </div>
 </template>
 
 <script lang="ts">
-import MainWrapper from "@/components/main-wrapper.vue";
+import MainWrapper from '@/components/main-wrapper.vue'
 
 export default {
   name: 'app',
   components: {
-    MainWrapper
-  }
+    MainWrapper,
+  },
 }
 </script>
 
-<style lang="scss">
-
-</style>
+<style lang="scss"></style>

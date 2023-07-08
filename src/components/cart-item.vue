@@ -1,9 +1,7 @@
 <template>
   <div class="cart-item">
     <div class="image-wrapper">
-      <img class="fill"
-           :src="cart_item_data.image"
-           alt="product">
+      <img class="fill" :src="cart_item_data.image" alt="product" />
     </div>
     <div class="item-info">
       <p class="item-name"></p>
@@ -12,7 +10,6 @@
     </div>
     <div class="items-quantity">
       <p>Quantity: {{ cart_item_data.quantity }}</p>
-
     </div>
     <button @click="deleteFromCart">Delete</button>
   </div>
@@ -20,22 +17,20 @@
 
 <script lang="ts">
 export default {
-  name: "cart-item",
+  name: 'cart-item',
   props: {
     cart_item_data: {
       type: Object as () => Record<string, unknown>,
       default() {
-        return {};
-      }
+        return {}
+      },
     },
   },
   methods: {
-    deleteFromCart(this: { $emit: Function }){
+    deleteFromCart(this: { $emit: Function }) {
       this.$emit('deleteFromCart')
-    }
+    },
   },
-
-
 }
 </script>
 

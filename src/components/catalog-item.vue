@@ -2,43 +2,39 @@
   <div class="catalog-item">
     <div class="item-info">
       <div class="image-wrapper">
-        <img class="fill"
-             :src="product_data.image"
-             alt="product">
+        <img class="fill" :src="product_data.image" alt="product" />
       </div>
       <p class="product-name">{{ product_data.name }}</p>
       <p class="product-price">Price: {{ product_data.price }} USD</p>
     </div>
-    <button class="add-to-cart-btn btn"
-            @click="addToCart">Add to Cart
-    </button>
+    <button class="add-to-cart-btn btn" @click="addToCart">Add to Cart</button>
   </div>
 </template>
 
 <script lang="ts">
 export default {
-  name: "catalog-item",
+  name: 'catalog-item',
   props: {
     product_data: {
       type: Object as () => object,
       default(): object {
-        return {};
+        return {}
       },
     },
   },
   methods: {
     addToCart(this: { $emit: Function; product_data: any }) {
       this.$emit('addToCart', this.product_data)
-    }
+    },
   },
   mounted() {
     this.product_data['quantity'] = 1
   },
-};
+}
 </script>
 
 <style lang="scss">
-@import "../assets/styles/variables";
+@import '../assets/styles/variables';
 
 .catalog-item {
   display: flex;
@@ -46,7 +42,7 @@ export default {
   align-items: center;
   justify-content: center;
   flex-basis: 25%;
-  padding: $padding*2;
+  padding: $padding * 2;
   height: 220px;
   border-radius: $radius;
   background-color: hsla(12, 44%, 58%, 1);
