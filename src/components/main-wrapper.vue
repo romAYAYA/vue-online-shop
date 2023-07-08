@@ -7,17 +7,19 @@
 </template>
 
 <script lang="ts">
-export default {
-  name: 'main-wrapper',
-}
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  name: 'MainWrapper',
+})
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 .main-wrapper {
   display: flex;
   justify-content: center;
-  align-content: center;
-  max-width: 900px;
+  align-items: center;
+  max-width: 1140px;
   margin: 0 auto;
 }
 </style>

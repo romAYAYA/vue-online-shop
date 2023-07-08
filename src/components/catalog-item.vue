@@ -28,7 +28,8 @@ export default {
     },
   },
   mounted() {
-    this.product_data['quantity'] = 1
+    // @ts-ignore
+    (this.product_data as any)['quantity'] = 1
   },
 }
 </script>

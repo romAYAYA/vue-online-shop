@@ -9,7 +9,11 @@
       <p>{{ cart_item_data.article }}</p>
     </div>
     <div class="items-quantity">
-      <p>Quantity: {{ cart_item_data.quantity }}</p>
+      <p>
+        <span @click="decrementItem" class="change-quantity">-</span>
+        Quantity: {{ cart_item_data.quantity }}
+        <span @click="incrementItem" class="change-quantity">+</span>
+      </p>
     </div>
     <button @click="deleteFromCart">Delete</button>
   </div>
@@ -30,15 +34,24 @@ export default {
     deleteFromCart(this: { $emit: Function }) {
       this.$emit('deleteFromCart')
     },
+
+    decrementItem(this: { $emit: Function }) {
+      this.$emit('decrement')
+    },
+
+    incrementItem(this: { $emit: Function }) {
+      this.$emit('increment')
+    },
   },
 }
 </script>
 
 <style lang="scss">
 .cart-item {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
+  display: grid;
   align-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+  padding: 7px;
 }
 </style>

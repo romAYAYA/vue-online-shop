@@ -1,6 +1,5 @@
 import { createStore, Commit } from 'vuex'
 import axios, { AxiosResponse } from 'axios'
-import { isProxy } from 'vue'
 
 interface Product {
   image: string
@@ -53,6 +52,14 @@ export default createStore<State>({
     REMOVE_FROM_CART: (state, index) => {
       state.cart.splice(index, 1)
     },
+    INCREMENT: (state, index) => {
+      state.cart[index].quantity++
+    },
+    DECREMENT: (state, index) => {
+      if (state.cart[index].quantity > 1) {
+        state.cart[index].quantity--
+      }
+    },
   },
   actions: {
     GET_PRODUCTS_FROM_API({
@@ -61,7 +68,7 @@ export default createStore<State>({
       commit: Commit
     }): Promise<AxiosResponse<Product[]>> {
       return axios
-        .get('http://localhost:3000/products')
+        .get('http://localhost:5000/products')
         .then((response: AxiosResponse<Product[]>) => {
           commit('SET_PRODUCTS_TO_STATE', response.data)
           return response
@@ -74,6 +81,13 @@ export default createStore<State>({
     ADD_TO_CART({ commit }: { commit: Commit }, product: Product) {
       commit('SET_CART', product)
     },
+    INCREMENT_CART_ITEM({ commit }: { commit: Commit }, index) {
+      commit('INCREMENT', index)
+    },
+    DECREMENT_CART_ITEM({ commit }: { commit: Commit }, index) {
+      commit('DECREMENT', index)
+    },
+
     DELETE_FROM_CART({ commit }: { commit: Commit }, index) {
       commit('REMOVE_FROM_CART', index)
     },

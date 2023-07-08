@@ -69,6 +69,20 @@
       "price": 999999,
       "article": "G10",
       "available": true
+    },
+    {
+      "image": "https://cdn.animeukiyo.com/wp-content/uploads/2022/06/Pretty-Anime-Girls-List-1-958x575.jpeg",
+      "name": "Anime Girl 11",
+      "price": 123,
+      "article": "G11",
+      "available": false
+    },
+    {
+      "image": "https://wealthofgeeks.com/wp-content/uploads/2022/10/Attractive-Anime-Girls-Banner.webp",
+      "name": "Anime Girl 12",
+      "price": 321,
+      "article": "G12",
+      "available": true
     }
   ]
 }
