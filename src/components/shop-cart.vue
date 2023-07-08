@@ -1,10 +1,6 @@
 <template>
   <div class="shop-cart">
-    <router-link to="/catalog">
-      <div class="catalog-link-to-cart">To Catalog</div>
-    </router-link>
-    <h1>Cart</h1>
-    <p v-if="!CART.length">Cart is empty</p>
+    <p class="cart-empty-note" v-if="!CART.length">Cart is empty</p>
     <cart-item
       v-for="(item, index) in CART"
       :key="item.article"
@@ -74,6 +70,12 @@ export default {
 
 .shop-cart {
   margin-bottom: 70px;
+
+  .cart-empty-note {
+    font-size: 38px;
+    font-weight: 700;
+    color: hsla(4, 100%, 72%, 1);
+  }
   .cart-total {
     position: fixed;
     bottom: 0;

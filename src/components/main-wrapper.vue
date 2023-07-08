@@ -14,6 +14,7 @@ export default defineComponent({
 })
 </script>
 
+HeaderComponent
 <style scoped lang="scss">
 .main-wrapper {
   display: flex;

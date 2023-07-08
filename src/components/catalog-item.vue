@@ -29,7 +29,7 @@ export default {
   },
   mounted() {
     // @ts-ignore
-    (this.product_data as any)['quantity'] = 1
+    ;(this.product_data as any)['quantity'] = 1
   },
 }
 </script>
@@ -42,44 +42,36 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-basis: 25%;
   padding: $padding * 2;
   height: 220px;
   border-radius: $radius;
-  background-color: hsla(12, 44%, 58%, 1);
-}
+  border: 1.8px solid hsla(269, 100%, 83%, 1);
 
-.item-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5px;
-  margin-bottom: $margin;
+  .item-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: $margin;
+  }
 }
 
 .image-wrapper {
   max-width: 200px;
-  height: 80px;
+  height: 90px;
   border-radius: $radius;
   overflow: hidden;
 }
 
 .product-name {
-  color: #ffffff;
   font-weight: 600;
   text-align: center;
 }
 
 .product-price {
-  color: #ffffff;
-
   font-weight: 500;
   text-align: center;
 }
 
-.add-to-cart-btn {
-  background-color: hsla(292, 9%, 45%, 1);
-  color: #ffffff;
-  font-weight: 500;
-}
+
 </style>

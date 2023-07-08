@@ -1,11 +1,5 @@
 <template>
   <div class="catalog-list">
-    <!--    move to header-->
-    <router-link to="/cart">
-      <div class="catalog-link-to-cart">Cart: {{ CART.length }}</div>
-    </router-link>
-
-    <div class="title">Catalog</div>
     <div class="list-wrapper">
       <catalog-item
         v-for="product in PRODUCTS"
@@ -31,10 +25,7 @@ export default {
     return {}
   },
   computed: {
-    ...mapGetters([
-      'PRODUCTS',
-      'CART', // Move to header
-    ]),
+    ...mapGetters(['PRODUCTS']),
   },
   methods: {
     ...mapActions(['GET_PRODUCTS_FROM_API', 'ADD_TO_CART']),
@@ -55,26 +46,21 @@ export default {
 
 <style lang="scss">
 .catalog-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 50px;
+  margin-bottom: 50px;
 
   .list-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 10px;
   }
-
-  //move to header
-  .catalog-link-to-cart {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    padding: 16px;
-    border: solid 1px black;
+  @media (max-width: 767px) {
+    .list-wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      padding: 10px;
+    }
   }
 }
 </style>

@@ -36,7 +36,8 @@ body {
   font-size: 100%;
   line-height: 1;
   font-size: 16px;
-  background-color: hsla(16, 45%, 70%, 0.5);
+  background-color: hsla(216, 28%, 7%, 1);
+  color: #fff;
   font-family: 'Dosis', sans-serif;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -102,6 +103,22 @@ h6 {
 }
 
 .btn {
-  padding: 1.8px;
+  background-color: hsla(269, 100%, 83%, 1);
+  padding: 6px 15px;
   border-radius: 4px;
+  color: black;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+@media (max-width: 767px) {
+  .btn {
+    padding: 3px 5px;
+    font-size: 16px;
+  }
+}
+
+.link {
+  color: #fff;
+  text-decoration: none;
 }
