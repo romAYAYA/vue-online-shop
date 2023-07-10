@@ -5,84 +5,96 @@
       "name": "Anime Girl 1",
       "price": 100,
       "article": "G1",
-      "available": true
+      "available": true,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequuntur eum tempora enim quae in ipsum, minima officiis. Neque error sapiente consequatur voluptatum assumenda sed quibusdam omnis id quas animi!"
     },
     {
       "image": "https://www.animesenpai.net/wp-content/uploads/2022/09/eromanga-sensei-izumi-sagiri-wallpaper-thumb.jpg.webp",
       "name": "Anime Girl 2",
       "price": 150,
       "article": "G2",
-      "available": true
+      "available": true,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequuntur eum tempora enim quae in ipsum, minima officiis. Neque error sapiente consequatur voluptatum assumenda sed quibusdam omnis id quas animi!"
     },
     {
       "image": "https://www.animesenpai.net/wp-content/uploads/2022/09/Lethal-Cute-Girls-4.jpg",
       "name": "Anime Girl 3",
       "price": 999,
       "article": "G3",
-      "available": false
+      "available": false,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequuntur eum tempora enim quae in ipsum, minima officiis. Neque error sapiente consequatur voluptatum assumenda sed quibusdam omnis id quas animi!"
     },
     {
       "image": "https://www.animesenpai.net/wp-content/uploads/2022/09/momo-velia-deviluke-to-love-ru-pink-hair-wallpaper-preview.jpg.webp",
       "name": "Anime Girl 4",
       "price": 843,
       "article": "G4",
-      "available": true
+      "available": true,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequuntur eum tempora enim quae in ipsum, minima officiis. Neque error sapiente consequatur voluptatum assumenda sed quibusdam omnis id quas animi!"
     },
     {
       "image": "https://www.animesenpai.net/wp-content/uploads/2022/09/maxresdefault.jpg.webp",
       "name": "Anime Girl 5",
       "price": 42,
       "article": "G5",
-      "available": true
+      "available": true,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequuntur eum tempora enim quae in ipsum, minima officiis. Neque error sapiente consequatur voluptatum assumenda sed quibusdam omnis id quas animi!"
     },
     {
       "image": "https://www.animesenpai.net/wp-content/uploads/2022/09/Tienes-tantos-estilos-Asi-se-ve-Rei-Ayanami-con-un-cambio-de-look-en-Evangelion.webp",
       "name": "Anime Girl 6",
       "price": 1530,
       "article": "G6",
-      "available": false
+      "available": false,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequuntur eum tempora enim quae in ipsum, minima officiis. Neque error sapiente consequatur voluptatum assumenda sed quibusdam omnis id quas animi!"
     },
     {
       "image": "https://www.animesenpai.net/wp-content/uploads/2022/09/d55c35ed3dc229fcbc6ee5e713f6437a-1536x864.jpg.webp",
       "name": "Anime Girl 7",
       "price": 894,
       "article": "G7",
-      "available": true
+      "available": true,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequuntur eum tempora enim quae in ipsum, minima officiis. Neque error sapiente consequatur voluptatum assumenda sed quibusdam omnis id quas animi!"
     },
     {
       "image": "https://www.animesenpai.net/wp-content/uploads/2022/09/maxresdefault-1.jpg.webp",
       "name": "Anime Girl 8",
       "price": 783,
       "article": "G8",
-      "available": true
+      "available": true,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequuntur eum tempora enim quae in ipsum, minima officiis. Neque error sapiente consequatur voluptatum assumenda sed quibusdam omnis id quas animi!"
     },
     {
       "image": "https://www.animesenpai.net/wp-content/uploads/2022/09/girl-kawaii-illya-sviel-Favim.com-6307070-min.jpg.webp",
       "name": "Anime Girl 9",
       "price": 1320,
       "article": "G9",
-      "available": false
+      "available": false,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequuntur eum tempora enim quae in ipsum, minima officiis. Neque error sapiente consequatur voluptatum assumenda sed quibusdam omnis id quas animi!"
     },
     {
       "image": "https://www.animesenpai.net/wp-content/uploads/2022/09/nao-tomori-charlotte-art-wallpaper-preview.jpg.webp",
       "name": "Anime Girl 10",
       "price": 999999,
       "article": "G10",
-      "available": true
+      "available": true,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequuntur eum tempora enim quae in ipsum, minima officiis. Neque error sapiente consequatur voluptatum assumenda sed quibusdam omnis id quas animi!"
     },
     {
       "image": "https://cdn.animeukiyo.com/wp-content/uploads/2022/06/Pretty-Anime-Girls-List-1-958x575.jpeg",
       "name": "Anime Girl 11",
       "price": 123,
       "article": "G11",
-      "available": false
+      "available": false,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequuntur eum tempora enim quae in ipsum, minima officiis. Neque error sapiente consequatur voluptatum assumenda sed quibusdam omnis id quas animi!"
     },
     {
       "image": "https://wealthofgeeks.com/wp-content/uploads/2022/10/Attractive-Anime-Girls-Banner.webp",
       "name": "Anime Girl 12",
       "price": 321,
       "article": "G12",
-      "available": true
+      "available": true,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis consequuntur eum tempora enim quae in ipsum, minima officiis. Neque error sapiente consequatur voluptatum assumenda sed quibusdam omnis id quas animi!"
     }
   ]
 }

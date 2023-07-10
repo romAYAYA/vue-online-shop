@@ -14,7 +14,7 @@
         Total: {{ cartTotalCost }} <span v-if="CART.length">USD</span>
       </p>
 
-      <router-link class="link shop-cart-link" to="/purchase"
+      <router-link v-if="CART.length" class="link shop-cart-link" to="/purchase"
         >Purchase</router-link
       >
     </div>

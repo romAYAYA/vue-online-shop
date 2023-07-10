@@ -7,6 +7,7 @@
         :product_data="product"
         @addToCart="addToCart"
       />
+
     </div>
   </div>
 </template>

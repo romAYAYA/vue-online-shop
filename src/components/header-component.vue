@@ -11,7 +11,9 @@
       </div>
     </div>
     <div class="link-to-cart">
-      <router-link class="link" to="/cart"> Cart: {{ CART.length }} </router-link>
+      <router-link class="link" to="/cart">
+        Cart: {{ CART.length }}
+      </router-link>
     </div>
   </div>
 </template>
@@ -36,7 +38,6 @@ export default {
   margin: 0 auto;
   background-color: hsla(215, 21%, 11%, 1);
   margin-bottom: 50px;
-
 
   .header-logo {
     max-width: 76px;
