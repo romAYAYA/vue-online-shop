@@ -59,11 +59,16 @@ export default {
 
     cartTotalCost() {
       if (this.CART.length) {
-        return this.CART.map((el) => Math.floor(el.price) * el.quantity).reduce(
-          (acc, el) => (acc = acc + el),
-          0
-        )
-      } else return 0
+        return this.CART.map((el) => {
+          const price = parseFloat(el.price)
+          const quantity = parseInt(el.quantity)
+          if (!isNaN(price) && !isNaN(quantity)) {
+            return Math.floor(price) * quantity
+          }
+          return 0
+        }).reduce((acc, el) => acc + el, 0)
+      }
+      return 0
     },
   },
 }

@@ -31,11 +31,9 @@ export default {
     deleteFromCart(this: { $emit: Function }) {
       this.$emit('deleteFromCart')
     },
-
     decrementItem(this: { $emit: Function }) {
       this.$emit('decrement')
     },
-
     incrementItem(this: { $emit: Function }) {
       this.$emit('increment')
     },

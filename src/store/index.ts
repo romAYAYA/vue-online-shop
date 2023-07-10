@@ -57,11 +57,17 @@ export default createStore<State>({
       state.cart.splice(index, 1)
     },
     INCREMENT: (state, index) => {
-      state.cart[index].quantity++
+      if (state.cart[index].quantity) {
+        state.cart[index].quantity++
+      } else {
+        state.cart[index].quantity = 1
+      }
     },
     DECREMENT: (state, index) => {
-      if (state.cart[index].quantity > 1) {
+      if (state.cart[index].quantity && state.cart[index].quantity > 1) {
         state.cart[index].quantity--
+      } else {
+        state.cart[index].quantity = 1
       }
     },
   },
