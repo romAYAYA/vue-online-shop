@@ -13,6 +13,10 @@
       <p class="total-price">
         Total: {{ cartTotalCost }} <span v-if="CART.length">USD</span>
       </p>
+
+      <router-link class="link shop-cart-link" to="/purchase"
+        >Purchase</router-link
+      >
     </div>
   </div>
 </template>
@@ -84,11 +88,23 @@ export default {
     padding: $padding * 3;
     display: flex;
     justify-content: center;
-    background: green;
+    background: hsla(102, 63%, 60%, 1);
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
 
     .total-price {
       margin-right: $margin * 2;
+      display: flex;
+      align-items: center;
     }
+  }
+
+  .shop-cart-link {
+    padding: 5px;
+    border-radius: $radius;
+    border: 1px solid black;
+    color: #fff;
   }
 }
 </style>

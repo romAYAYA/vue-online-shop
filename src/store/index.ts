@@ -15,11 +15,16 @@ interface State {
   cart: Product[]
 }
 
+const savedState = localStorage.getItem('storeState')
+const initialState: State = savedState
+  ? JSON.parse(savedState)
+  : {
+      products: [],
+      cart: [],
+    }
+
 export default createStore<State>({
-  state: {
-    products: [],
-    cart: [],
-  },
+  state: initialState,
   getters: {
     PRODUCTS: (state) => {
       return state.products
@@ -48,7 +53,6 @@ export default createStore<State>({
         state.cart.push(product)
       }
     },
-
     REMOVE_FROM_CART: (state, index) => {
       state.cart.splice(index, 1)
     },
@@ -87,10 +91,16 @@ export default createStore<State>({
     DECREMENT_CART_ITEM({ commit }: { commit: Commit }, index) {
       commit('DECREMENT', index)
     },
-
     DELETE_FROM_CART({ commit }: { commit: Commit }, index) {
       commit('REMOVE_FROM_CART', index)
     },
   },
   modules: {},
+  plugins: [
+    (store) => {
+      store.subscribe((mutation, state) => {
+        localStorage.setItem('storeState', JSON.stringify(state))
+      })
+    },
+  ],
 })

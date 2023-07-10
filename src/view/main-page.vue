@@ -15,6 +15,7 @@ export default {
     }
   },
   mounted() {
+    // @ts-ignore
     window.onload = () => {
       this.pageLoaded = true
     }
